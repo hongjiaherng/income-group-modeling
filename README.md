@@ -2,11 +2,11 @@
 
 Project repository for class assignment of WIE3007 Data Mining and Warehousing at University of Malaya, session 2023/2024 (Semester 1).
 
-> **Submission items:**
->
-> - Project report: [link](https://github.com/hongjiaherng/income-group-modeling/blob/main/submission/WIE3007%20Group%20Assignment%20Report.pdf)
-> - Presentation slides: [link](https://github.com/hongjiaherng/income-group-modeling/blob/main/submission/WIE3007%20Group%20Assignment%20Slides.pdf)
-> - Presentation video: [link](https://drive.google.com/file/d/1V2lSD_1nrDhZUlHMh7PTBnzSKUlKaUrr/view?usp=sharing)
+**Submission items:**
+
+- Project report: [link](https://github.com/hongjiaherng/income-group-modeling/blob/main/submission/WIE3007%20Group%20Assignment%20Report.pdf)
+- Presentation slides: [link](https://github.com/hongjiaherng/income-group-modeling/blob/main/submission/WIE3007%20Group%20Assignment%20Slides.pdf)
+- Presentation video: [link](https://drive.google.com/file/d/1V2lSD_1nrDhZUlHMh7PTBnzSKUlKaUrr/view?usp=sharing)
 
 ## Project Description
 
@@ -20,7 +20,7 @@ The dataset used in this project is the [Adult Income Dataset](https://www.kaggl
 
 ### Prerequisites
 
-- SAS Enterprise Miner
+- SAS Enterprise Miner 15.2
 - Python, Jupyter Notebook
 
 ### Setup
@@ -32,7 +32,30 @@ git clone https://github.com/hongjiaherng/income-group-modeling.git
 ```
 
 2. Open the project in SAS Enterprise Miner
+
+   ![import diagram](/imgs/import-diagram-from-xml.png)
+
+   ![open diagram](/imgs/open-xml.png)
+
 3. Modify the File Import node to point to the correct location of the dataset
+
+   - Modeling diagram (filepath: [`/IncomeModeling.xml`](https://github.com/hongjiaherng/income-group-modeling/blob/main/IncomeModeling.xml))
+
+     _Include all phases from SEMMA except `Explore`._
+
+     - Modify file import node to point to `/data/cleaned_data.csv`
+       ![modify file import node](/imgs/modify-import-file-model.png)
+
+   - Exploring diagram (filepath: [`/IncomeExploring.xml`](https://github.com/hongjiaherng/income-group-modeling/blob/main/IncomeExploring.xml))
+
+     _Include the `Explore` phase only, with **descriptive analysis**, **associaton rule mining**, **sequence analysis**, and **time series clustering**._
+
+     - Modify file import node to point to `/data/cleaned_data.csv` (descriptive analysis)
+       ![modify file import node 1](/imgs/modify-import-file-explore-1.png)
+
+     - Modify file import node to point to `/data/cleaned_data_synthesized.csv` (association rule mining, sequence analysis, time series clustering)
+       ![modify file import node 2](/imgs/modify-import-file-explore-2.png)
+
 4. Run the nodes in the SAS Enterprise Miner project
 
 ## Dataset Description
