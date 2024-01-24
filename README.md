@@ -43,17 +43,17 @@ git clone https://github.com/hongjiaherng/income-group-modeling.git
 
      _Include all phases from SEMMA except `Explore`._
 
-     - Modify file import node to point to `/data/cleaned_data.csv`
+     - Modify file import node to point to [`/data/cleaned_data.csv`](https://github.com/hongjiaherng/income-group-modeling/blob/main/data/cleaned_data.csv)
        ![modify file import node](/imgs/modify-import-file-model.png)
 
    - Exploring diagram (filepath: [`/IncomeExploring.xml`](https://github.com/hongjiaherng/income-group-modeling/blob/main/IncomeExploring.xml))
 
      _Include the `Explore` phase only, with **descriptive analysis**, **associaton rule mining**, **sequence analysis**, and **time series clustering**._
 
-     - Modify file import node to point to `/data/cleaned_data.csv` (descriptive analysis)
+     - Modify file import node to point to [`/data/cleaned_data.csv`](https://github.com/hongjiaherng/income-group-modeling/blob/main/data/cleaned_data.csv) (descriptive analysis)
        ![modify file import node 1](/imgs/modify-import-file-explore-1.png)
 
-     - Modify file import node to point to `/data/cleaned_data_synthesized.csv` (association rule mining, sequence analysis, time series clustering)
+     - Modify file import node to point to [`/data/cleaned_data_synthesized.csv`](https://github.com/hongjiaherng/income-group-modeling/blob/main/data/cleaned_data_synthesized.csv) (association rule mining, sequence analysis, time series clustering)
        ![modify file import node 2](/imgs/modify-import-file-explore-2.png)
 
 4. Run the nodes in the SAS Enterprise Miner project
@@ -79,6 +79,12 @@ The dataset contains 32561 instances with 14 attributes. The attributes are:
 | 13  | capital_loss   | continuous                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | 14  | hours_per_week | continuous                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | 15  | native_country | United-States, Cambodia, England, Puerto-Rico, Canada, Germany, Outlying-US(Guam-USVI-etc), India, Japan, Greece, South, China, Cuba, Iran, Honduras, Philippines, Italy, Poland, Jamaica, Vietnam, Mexico, Portugal, Ireland, France, Dominican-Republic, Laos, Ecuador, Taiwan, Haiti, Columbia, Hungary, Guatemala, Nicaragua, Scotland, Thailand, Yugoslavia, El-Salvador, Trinadad&Tobago, Peru, Hong, Holand-Netherlands |
+
+## Extra
+
+- We extended the Census Income dataset by incorporating time series variable to enable **sequence modeling** and **association rule mining** in SAS Enterprise Miner.
+  - Notebook: [`synthesize.ipynb`](https://github.com/hongjiaherng/income-group-modeling/blob/main/synthesize.ipynb)
+  - Synthesized dataset: [`/data/cleaned_data_synthesized.csv`](https://github.com/hongjiaherng/income-group-modeling/blob/main/data/cleaned_data_synthesized.csv)
 
 ## Contributors
 
