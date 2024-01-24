@@ -27,9 +27,9 @@ The dataset used in this project is the [Adult Income Dataset](https://www.kaggl
 
 1. Clone the repository
 
-```bash
-git clone https://github.com/hongjiaherng/income-group-modeling.git
-```
+   ```bash
+   git clone https://github.com/hongjiaherng/income-group-modeling.git
+   ```
 
 2. Open the project in SAS Enterprise Miner
 
@@ -39,16 +39,16 @@ git clone https://github.com/hongjiaherng/income-group-modeling.git
 
 3. Modify the File Import node to point to the correct location of the dataset
 
-   - Modeling diagram (filepath: [`/IncomeModeling.xml`](https://github.com/hongjiaherng/income-group-modeling/blob/main/IncomeModeling.xml))
+   - **Modeling diagram** (filepath: [`/IncomeModeling.xml`](https://github.com/hongjiaherng/income-group-modeling/blob/main/IncomeModeling.xml))
 
-     _Include all phases from SEMMA except `Explore`._
+     Include all phases from SEMMA except `Explore`.
 
      - Modify file import node to point to [`/data/cleaned_data.csv`](https://github.com/hongjiaherng/income-group-modeling/blob/main/data/cleaned_data.csv)
        ![modify file import node](/imgs/modify-import-file-model.png)
 
-   - Exploring diagram (filepath: [`/IncomeExploring.xml`](https://github.com/hongjiaherng/income-group-modeling/blob/main/IncomeExploring.xml))
+   - **Exploring diagram** (filepath: [`/IncomeExploring.xml`](https://github.com/hongjiaherng/income-group-modeling/blob/main/IncomeExploring.xml))
 
-     _Include the `Explore` phase only, with **descriptive analysis**, **associaton rule mining**, **sequence analysis**, and **time series clustering**._
+     Include the `Explore` phase only, with _descriptive analysis_, _associaton rule mining_, _sequence analysis_, and _time series clustering_.
 
      - Modify file import node to point to [`/data/cleaned_data.csv`](https://github.com/hongjiaherng/income-group-modeling/blob/main/data/cleaned_data.csv) (descriptive analysis)
        ![modify file import node 1](/imgs/modify-import-file-explore-1.png)
